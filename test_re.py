@@ -1,4 +1,5 @@
 import re
+import os
 
 # p = re.compile(r'(\d+)-(\d+)-(\d+)')
 # print(p.match('2018-08-002').group(2))
@@ -24,6 +25,17 @@ def get_new_fname (old_fn):
     return  new_s
 fn = get_new_fname('工作核查单（JL2018-08-004）-湖州.doc')
 print(fn)
+
+srcDir = r'D:\2_TDDOWNLOAD\0703021\babes.1.alexis.crystal.and.vicky.love.silent.musings.mp4'
+dstDir = r'D:\2_TDDOWNLOAD\0703021\love6699.mp4'
+
+try:
+    os.rename(srcDir,dstDir)
+except Exception as e:
+    print (e)
+    print ('rename dir fail\n')
+else:
+    print ('rename dir success\n')
 
 #
 #
