@@ -47,3 +47,15 @@ for n in x:
     # print('核查单 : %s' %n)
     if n.find('-08-') > 1:
         print('核查单 : %s' %n)
+
+print('***********************************************')
+
+def Test2(rootDir):
+    for lists in os.listdir(rootDir):
+        path = os.path.join(rootDir, lists)
+
+        if os.path.isfile(path):
+            print( path )
+
+
+Test2(r'D:\__各地市督办核查单\_新核查')
